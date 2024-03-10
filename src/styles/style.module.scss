@@ -1,0 +1,135 @@
+@import 'vars';
+
+.inner {
+    background-color: #F5F5F596;
+    width: 1000px;
+    height: 670px;
+    padding: 77px 230px 43px 170px;
+    border-radius: 20px;
+}
+
+.title {
+    @extend %title;
+}
+
+.input {
+    margin-top: 32px;
+    background-color: #fff;
+    padding: 7px 7px 7px 20px;
+    border-radius: 10px;
+    width: 600px;
+    height: 58px;
+}
+
+.textArea {
+    margin-top: 16px;
+    outline: none;
+    width: 80%;
+    font-size: 16px;
+
+    &::placeholder {
+        color: #000;
+        font-feature-settings: 'liga' off;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: 0.16px;
+    }
+}
+
+.addBtn {
+    float: right;
+    @extend %button;
+}
+
+.noTasks {
+    color: #000;
+    font-size: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+.radioBox {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    appearance: none;
+    padding: 7px;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.radioBox:checked {
+    background-color: #000;
+}
+
+.radioBox:checked::after {
+    content: '';
+    background-image: url('../../public/ok.svg');
+    display: flex;
+    width: 16px;
+    height: 16px;
+}
+
+.label {
+    @extend %item;
+}
+
+.btnUp {
+    @extend %button;
+    position: absolute;
+    right: 134px;
+}
+
+.upTask {
+    @extend %button;
+}
+
+.btnDel {
+    @extend %button;
+    position: absolute;
+    right: 0;
+}
+
+.items {
+    margin-top: 40px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    position: absolute;
+    bottom: 43px;
+    right: 230px;
+    left: 170px;
+}
+
+.count {
+    color: #000;
+    font-feature-settings: 'liga' off;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.16px;
+    margin-top: 24px;
+    margin-left: 20px;
+}
+
+.clearAll {
+    color: #000;
+    font-feature-settings: 'liga' off;
+    line-height: 110%;
+    letter-spacing: 0.16px;
+    margin-top: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
